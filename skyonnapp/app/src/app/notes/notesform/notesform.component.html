@@ -1,0 +1,72 @@
+<div class="col-md-4">
+  <app-title>
+  </app-title>
+</div>
+
+
+<!-- 
+<div>
+  <div class="col-md-8" id="right">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Enter Title">
+     
+    </div>
+    <div class="form-group">
+      <textarea name="" placeholder="Enter Description (Form)" class="form-control" id="" cols="180" rows="30"></textarea>
+    </div>
+    <button id="button" class="btn btn-primary" (click)="postUsers(form)">submit</button>
+  </div>
+</div> -->
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-offset-3">
+
+      <form #form="ngForm" id="form" Auto-Submit="1000" name="myForm">
+        <table align="center">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-11">
+                <input class="form-control" type="text" #subject="ngModel" size="50" name="subject"
+                  [(ngModel)]="Users.subject">
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-11">
+                <textarea name="" placeholder="Enter Description (Form)" class="form-control" id="" cols="180" rows="20"
+                  #discription="ngModel" size="50" name="discription" [(ngModel)]="Users.discription"></textarea>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-offset-5">
+                <button id="button" class="btn btn-primary" (click)="postUsers(form)">submit</button>
+              </div>
+
+            </div>
+          </div>
+          <!-- 
+          <td align="center">
+
+          </td> -->
+
+          <!-- <div class="form-group">
+            <textarea name="" placeholder="Enter Description (Form)" class="form-control" id="" cols="180" rows="20"
+              #discription="ngModel" size="50" name="discription" [(ngModel)]="Users.discription"></textarea>
+          </div>
+          <br>
+          <tr>
+            <td align="center">
+              <button id="button" class="btn btn-primary" (click)="postUsers(form)">submit</button>
+            </td>
+          </tr> -->
+        </table>
+      </form>
+
+    </div>
+
+  </div>
+</div>

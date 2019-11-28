@@ -1,0 +1,70 @@
+<!--<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+ <li>
+        <a  routerLink="edit">EDIT</a>
+      <a href=""></a> -->
+<!-- </li> -->
+<!--     
+ <li>
+        <a  routerLink="delete">DELETE</a>
+ </li>
+ <li>
+        <a  routerLink="search">search</a>
+    </li>
+      -->
+
+<!-- </nav> -->
+
+
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+    <div class="container-fluid">
+
+        <ul class="nav navbar-nav">
+            <li (click)="MoreDetails()"><a>Notes</a>
+            </li>
+            <li (click)="MoreDetails()"><a>Home</a></li>
+            <li>
+                <!-- <a href=""> <span class="glyphicon" (click)="MoreDetails()">&#xe020;</span></a> -->
+            </li>
+            <li>
+                <a href=""> <span class="glyphicon glyphicon-plus-sign" (click)="MoreDetails()"></span> New
+                </a>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li class="search">
+                <div class="glyphicon">
+                    <input class="form-control mr-sm-2" type="search" size="35" name="search" (keyup)="search()"
+                        [(ngModel)]="searchText" autocomplete="off" placeholder="&#xe003;Searching">
+                </div>
+
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+
+
+
+<!-- <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" (click)="MoreDetails()">Notes</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a (click)="MoreDetails()">Home</a>
+            </li>
+            <li>
+                <input class="form-control" type="text" name="search" (keyup)="search()" [(ngModel)]="searchText"
+                    autocomplete="off" placeholder="&#61442;  Start searching ">
+            </li>
+        </ul>
+    </div>
+    <div>
+
+    </div>
+</nav> -->
+
+<router-outlet></router-outlet>

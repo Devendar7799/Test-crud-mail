@@ -1,0 +1,82 @@
+<div class="col-md-4">
+  <app-title>
+  </app-title>
+</div>
+
+<!-- <div>
+  <div class="col-md-8" id="right">
+      <div class="form-group">          
+          <input type="text" class="form-control"  placeholder="Enter Title">
+        </div>
+      <div class="form-group">          
+          <textarea name=""   placeholder="Enter Description" class="form-control" id="" cols="180" rows="30"></textarea>
+        </div>
+  </div>
+</div> -->
+
+
+
+<!-- <h4 class="textHeading">Edit User Details</h4> -->
+<!-- <div class="container" id="edit">
+
+  <form #form="ngForm" (ngSubmit)="form.myForm && edit()" id="form" name="myForm">
+    <table align="center">
+      <tr>
+        <td>
+          Title:
+        </td>
+        <td>
+          <input class="form-control" type="text" #subject="ngModel" name="subject" [(ngModel)]="Users.subject">
+        </td>
+      </tr>
+
+      <tr>
+        <td>Description:</td>
+        <td>
+          <textarea class="form-control" type="text" #discription="ngModel" name="discription" [(ngModel)]="Users.discription" class="form-control"
+            id="" cols="180" rows="30">  </textarea>
+        </td>
+      </tr>
+
+      <tr>
+        <td align="center">
+          <button id="button" class="btn btn-primary" (click)="edit()">submit</button>
+        </td>
+      </tr>
+      
+    </table>
+  </form>
+
+</div> -->
+
+
+
+<div class="container-fluid">
+
+
+  <form #form="ngForm" (ngSubmit)="form.myForm && edit()" id="form" name="myForm">
+    <table align="center">
+
+      <div class="row">
+        <div class="col-md-11">
+          <input class="form-control" type="text" #subject="ngModel" name="subject" [(ngModel)]="Users.subject">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-11">
+
+          <textarea class="form-control" type="text" #discription="ngModel" name="discription"
+            [(ngModel)]="Users.discription" class="form-control" id="" cols="180" rows="20">  </textarea>
+        </div>
+      </div>
+      <br>
+      <div class="col-md-offset-5 col-md-8">
+        <button id="button" class="btn btn-primary" (click)="edit()">submit</button>
+      </div>
+
+    </table>
+  </form>
+
+
+</div>

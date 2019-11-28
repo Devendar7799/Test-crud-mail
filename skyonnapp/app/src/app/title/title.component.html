@@ -1,0 +1,141 @@
+<!-- <virtual-scroll #scroll>
+ 
+  
+<div class="container" id="edit">
+
+  <form #form="ngForm" id="form" name="myForm" novalidate>
+    <table align="center">
+      <tr  *ngFor="let getuser of getusers">     
+      <td class="col-md-4">{{getuser.subject}}</td>
+      <td class="col-md-4">{{getuser.discription}}</td>
+      </tr>
+    </table>
+
+  </form>
+
+</div>        
+                                                                                                          
+</virtual-scroll> -->
+
+
+
+<!-- <div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let getuser of getusers|search:getSearchedData">
+
+      <div class="col-md-3">
+        {{getuser.subject}}
+      </div>
+      <div class="col-md-3">
+        {{getuser.discription}};
+      </div>
+      <div class="col-md-3">
+
+        {{getuser.time}};
+      </div>
+      <div class="col-md-3">
+
+        {{getuser.date}}
+      </div>
+    </div>
+
+
+  </div>
+
+</div> -->
+
+<div class="loading" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()"
+  [scrollWindow]="false" style="height: 550px; overflow-y: scroll;">
+
+  <!-- <div class="table-responsive">
+    <table class="table table-striped">
+      <tr *ngFor="let getuser of getusers|search:getSearchedData">
+        <td>
+          {{getuser.subject}}
+        </td>
+        <td>
+          {{getuser.discription}}
+        </td>
+        <td>
+          {{getuser.time}}
+        </td>
+        <td>
+          {{getuser.date}}
+        </td>
+        <!-- <td>
+          <span class="glyphicon" (click)="edit(getuser.id)">&#xe065;</span>
+        </td>
+        <td>
+          <span class="glyphicon" (click)="delete(getuser.id)">&#xe020;</span>
+        </td>
+      </tr>
+    </table>
+
+  </div> -->
+
+
+
+
+
+
+
+  <div *ngFor="let getuser of getusers|search:getSearchedData">
+
+
+
+    <div class="card" (click)="edit(getuser.id)">
+      <div class="row">
+        <div class="col-md-12">
+          <h4><b> {{getuser.subject}}</b></h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+
+          <p> {{getuser.discription}} </p>
+        </div>
+        <div class="col-md-4">
+          {{getuser.date}}&nbsp; {{getuser.time}}
+        </div>
+        <div class="col-md-2">
+          <span class="glyphicon" (click)="delete(getuser.id)">&#xe020;</span>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- <div class="col-md-12">
+
+
+        <div class="card" >
+          <div>
+            {{getuser.subject}}
+
+          </div>
+          <div class="col-md-6">
+            {{getuser.discription}}
+          </div>
+
+          <div class="col-md-3">
+            {{getuser.date}}
+
+          </div>
+          <div class="col-md-3">
+            {{getuser.time}}
+
+          </div>
+
+        </div>
+      </div> -->
+
+
+  <!-- <div class="card">
+    <div class="card-body">
+      This is some text within a card body.
+    </div>
+  </div> -->
+
+
+
+</div>
