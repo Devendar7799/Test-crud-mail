@@ -1,4 +1,4 @@
-Project After opening ZIP got to path(test\Test-crud-mail\skyonnapp\app>) File please install below npm :
+Project After opening ZIP got to path(Test-crud-mail\skyonnapp\app>) File please install below npm :
 
 1)npm install 
 
