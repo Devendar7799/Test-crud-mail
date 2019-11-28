@@ -44,8 +44,8 @@
 
 </div> -->
 
-<div class="loading" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()"
-  [scrollWindow]="false" style="height: 550px; overflow-y: scroll;">
+<div class="loading" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()" [scrollWindow]="false"
+  style="height: 550px; overflow-y: scroll;">
 
   <!-- <div class="table-responsive">
     <table class="table table-striped">
@@ -83,19 +83,23 @@
 
 
 
-    <div class="card" (click)="edit(getuser.id)">
+    <div class="card">
       <div class="row">
-        <div class="col-md-12">
-          <h4><b> {{getuser.subject}}</b></h4>
+        <div (click)="edit(getuser.id)">
+          <div class="col-md-12">
+            <h4>
+              <b> {{getuser.subject.substring(0,10).concat("...")}}</b>
+            </h4>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
+        <div class="row" (click)="edit(getuser.id)">
+          <div class="col-md-6">
 
-          <p> {{getuser.discription}} </p>
-        </div>
-        <div class="col-md-4">
-          {{getuser.date}}&nbsp; {{getuser.time}}
+            <p> {{getuser.discription.substring(0,10).concat("...")}} </p>
+          </div>
+          <div class="col-md-4">
+            {{getuser.date}}&nbsp; {{getuser.time}}
+          </div>
         </div>
         <div class="col-md-2">
           <span class="glyphicon" (click)="delete(getuser.id)">&#xe020;</span>
